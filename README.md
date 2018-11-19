@@ -1,5 +1,5 @@
 This is a submission for the problem statement provided by the NUSAMDWorkshop 2018 hackathon challenge.
-I call this the "Quick n Dirty"
+I call this the "Quick n Dirty", which is in the spirit of the problem statement.
 
 Details can be found here
 https://github.com/acceleratedmaterials/Hackathon/blob/master/README.md
