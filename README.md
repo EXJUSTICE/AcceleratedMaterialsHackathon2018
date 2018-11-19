@@ -1,4 +1,5 @@
 This is a submission for the problem statement provided by the NUSAMDWorkshop 2018 hackathon challenge.
+I call this the "Quick n Dirty"
 
 Details can be found here
 https://github.com/acceleratedmaterials/Hackathon/blob/master/README.md
@@ -12,6 +13,7 @@ SVR 0.185 <br />
 Bayesian 0.120 <br />
 LR 0.121 <br />
 SGDR 0.165 <br />
+
 To run this code, make sure you have SKlearn, pandas, and numpy installed in spyder.
 
 
