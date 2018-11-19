@@ -8,10 +8,10 @@ but tuning was not not optimized. Learning rate and scaling were identified as c
 
 The current results are as follows (units were not specified, assuming A)
 
-SVR 0.185
-Bayesian 0.120
-LR 0.121
-SGDR 0.165
+SVR 0.185 <br />
+Bayesian 0.120 <br />
+LR 0.121 <br />
+SGDR 0.165 <br />
 To run this code, make sure you have SKlearn, pandas, and numpy installed in spyder.
 
 
