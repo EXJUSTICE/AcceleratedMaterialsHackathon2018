@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 Code for AMDNUSWorkshop
@@ -11,7 +10,7 @@ Three methods used here. Suppor vector machine regression
 Bayesian Ridge,
 And traditional linear regression in 3D.
 
-No SGD or other methods used due to lack of time to tune methods
+SGD was included for posterity, there was insufficient time for tuning optimization.
 
 @author: Adrian Yijie Xu
 """
@@ -56,7 +55,8 @@ data_df = pd.read_csv("C:/Users/Adrian/datanames.csv")
 # print(df_new)
 
 #Select only V & T for input dataset
-
+#Shuffling data because why the hell not
+#Drop the first row
 inputs =data_df[['V','T']].copy()
 
 inputsshuf= inputs
@@ -76,5 +76,15 @@ for item in classifiers:
     clf.fit(inputsshuf, outputsshuf)
     print(clf.predict(predictData),'\n')
     
+    
+from sklearn.preprocessing import StandardScaler
+X_scaled = StandardScaler().fit_transform(inputsshuf)
+Y_scaled=StandardScaler().fit_transform(outputsshuf)
+
+classifier =  linear_model.SGDRegressor(eta0=0.000000001, loss="squared_loss", penalty=None,n_iter=20000, shuffle=True)
+print(classifier)
+clf = classifier
+clf.fit(X_scaled, Y_scaled)
+print(clf.predict(predictData),'\n')    
 print ("Finished")
     
